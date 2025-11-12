@@ -1,33 +1,90 @@
+/* --- Base Styles (Desktop/Large Screens) --- */
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 40px;
-    }
-    .navbar img {
+    padding: 20px 40px; /* Use padding for better responsiveness */
+    background-color: #252323; /* Example background */
+    color: #f5f5f5;
+}
+
+.navbar img {
     height: 50px;
-    /* float: left; */
-    /* margin-left: 20px; */
-    }
-    .nav-links{
-    display: flex;
-    align-items: center;
+}
+
+.nav-links {
+    display: flex; /* Default desktop layout */
     list-style: none;
     gap: 30px;
     font-size: 10px;
-    }
-    .nav-links li {
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+.nav-links li {
     cursor: pointer;
-    }
-    .connect {
+}
+
+.connect {
     padding: 8px 16px;
     border: 1px solid #f5f5f5;
     border-radius: 20px;
-    font-size: 10px;
+    font-size: 16px;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+/* --- Hamburger Icon Styles --- */
+
+.menu-icon {
+    display: none; /* Hidden by default on desktop */
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+/* --- Responsive Layout (Max-width 768px for Tablet/Mobile) --- */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
     }
-    .connect:hover {
-    background-color: #f5f5f5;
-    color: #252323;
-    transition: 0.3s;
+
+    /* 1. Show the hamburger icon */
+    .menu-icon {
+        display: block; 
     }
+    
+    /* 2. Hide the desktop links and prepare for mobile layout */
+    .nav-links {
+        display: none; /* Hide by default on small screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 80px; /* Position it below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Darker background for the dropdown */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 50;
+        text-align: center;
+        padding: 10px 0;
+        
+        /* Optional: Hide the connect button on very small screens to save space */
+        /* .connect { display: none; } */
+    }
+
+    /* 3. Style for when the menu is actively open (conditional class from React) */
+    .nav-links.open {
+        display: flex; /* Override the default 'display: none;' */
+    }
+    
+    .nav-links li {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+}
