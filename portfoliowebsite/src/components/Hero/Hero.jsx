@@ -11,7 +11,10 @@ const Hero = () => {
             <p>
                 I specialize in creating dynamic and responsive web applications using the MERN stack (MongoDB, Express.js, React, Node.js). With a passion for coding and problem-solving, I strive to build efficient and user-friendly digital experiences.
             </p>
-            <button>Get in Touch</button>
+            <div className="hero-buttons">
+                <button className='btn hire-me'>Hire Me</button>
+                <button className='btn download-cv'>Download CV</button>
+            </div>
         </div>
     </div>
   )

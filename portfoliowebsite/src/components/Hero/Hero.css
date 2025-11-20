@@ -17,29 +17,37 @@
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
 .hero-text h1 span {
-    color: #610755;
+   background: linear-gradient(90deg, #aa3190, #7bfe81);
+   background-clip: text;
+   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
 }
 
-.hero-text button {
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.btn {
     padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #610755;
-    color: white;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.hero-text button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: white;
+    
 }
