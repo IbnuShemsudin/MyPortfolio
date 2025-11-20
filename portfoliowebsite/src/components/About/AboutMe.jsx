@@ -20,17 +20,16 @@ const AboutMe = () => {
             </p>
            </div>
            <div className='about-skills'>
-            <h3>Skills:</h3>
-            <ul>
-              <li>JavaScript</li>
-              <li>React.js</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
-              <li>HTML & CSS</li>
-              <li>Git & GitHub</li>
-            </ul>
-           </div>
+             <h1>Skills </h1>                 
+             <div className='about-skill'><p>HTML & CSS</p><hr /></div>
+             <div className='about-skill'><p>HTML & CSS</p><hr /></div>
+             <div className='about-skill'><p>HTML & CSS</p><hr /></div>
+             <div className='about-skill'><p>HTML & CSS</p><hr /></div>
+             <div className='about-skill'><p>HTML & CSS</p><hr /></div>
+             <div className='about-skill'><p>HTML & CSS</p><hr /></div>
+             <div className='about-skill'><p>HTML & CSS</p><hr /></div>
+          </div>
+
 
           </div>
         </div>
