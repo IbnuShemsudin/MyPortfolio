@@ -35,15 +35,17 @@ const AboutMe = () => {
         </div>
         <div className='about-achievments'>
           <div className="achievment">   
-            <h2>5+</h2>
+            <h1>5+</h1>
             <p>Years of Experience</p>
           </div>
+          <hr />
           <div className="achievment">   
-            <h2>50+</h2>
+            <h1>50+</h1>
             <p>Projects Completed</p>
           </div>
+          <hr />
           <div className="achievment">   
-            <h2>10+</h2>
+            <h1>10+</h1>
             <p>Happy Clients</p>
           </div>
         </div>
